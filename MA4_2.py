@@ -14,7 +14,7 @@ def main():
     
 	timescpp = []
 	timespy = []
-	values = range(30, 35)
+	values = range(30, 45)
 
 	for n in values:
 		f = Integer(n)
@@ -35,13 +35,13 @@ def main():
 		print("Time: ", round(t, 2))
 		timespy.append(t)
  
-	# print("Timing for C++ where n = 47")
-	# f = Integer(47)
-	# start = perf()
-	# print(f.fib())
-	# end = perf()
-	# t = end - start
-	# print(round("Time: ", t), 3)
+	print("Timing for C++ where n = 47")
+	f = Integer(47)
+	start = perf()
+	print(f.fib())
+	end = perf()
+	t = end - start
+	print("Time: ", round(t, 2))
  
 	plt.plot(values, timescpp, 'r.', label="C++")
 	plt.plot(values, timespy, 'b.', label="Python")
