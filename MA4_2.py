@@ -6,20 +6,20 @@ from time import perf_counter as perf
 
 def main():
     
-    timescpp = []
-    timespy = []
-    values = range(30, 45)
-	
+	timescpp = []
+	timespy = []
+	values = range(30, 45)
+
 	for n in values:
 		f = Integer(n)
-  
+
 		print("Timing for C++ where n =", n)
 		start = perf()
 		print(f.fib())
 		end = perf()
 		t = end - start
 		print(round("Time: ", t), 3)
-  		timescpp.append(t)
+		timescpp.append(t)
 
 		print("Timing for Python where n =", n)
 		start = perf()
@@ -27,7 +27,7 @@ def main():
 		end = perf()
 		t = end - start
 		print(round("Time: ", t), 3)
-  		timespy.append(t)
+		timespy.append(t)
  
 	print("Timing for C++ where n = 47")
 	f = Integer(47)
