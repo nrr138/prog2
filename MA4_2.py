@@ -38,18 +38,18 @@ def main():
 	print(round("Time: ", t), 3)
  
 	plt.plot(values, timescpp, 'r.', label="C++")
- 	plt.plot(values, timespy, 'b.', label="Python")
+	plt.plot(values, timespy, 'b.', label="Python")
 	plt.title("Computing time for fib(n)")
 	plt.xlabel("n")
 	plt.ylabel("Seconds")
- 	plt.legend(loc="upper left")
+	plt.legend(loc="upper left")
 	plt.savefig("FibCompute.png")
 
 if __name__ == '__main__':
 	main()
- 
+
 def fib_pure_py(n):
-    if n <= 1:
-        return n
-    else:
-        return(fib_pure_py(n-1) + fib_pure_py(n-2))
+	if n <= 1:
+		return n
+	else:
+		return(fib_pure_py(n-1) + fib_pure_py(n-2))
