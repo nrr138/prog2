@@ -4,6 +4,12 @@ from integer import Integer
 import matplotlib.pyplot as plt
 from time import perf_counter as perf
 
+def fib_pure_py(n):
+	if n <= 1:
+		return n
+	else:
+		return(fib_pure_py(n-1) + fib_pure_py(n-2))
+
 def main():
     
 	timescpp = []
@@ -47,9 +53,3 @@ def main():
 
 if __name__ == '__main__':
 	main()
-
-def fib_pure_py(n):
-	if n <= 1:
-		return n
-	else:
-		return(fib_pure_py(n-1) + fib_pure_py(n-2))
